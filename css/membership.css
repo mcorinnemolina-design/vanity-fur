@@ -1,0 +1,449 @@
+/* ============================================
+   VANITY FUR CLUB — Membership Page Styles
+   ============================================ */
+
+/* --- Nav Always Scrolled Look on Inner Pages --- */
+.nav--scrolled-always {
+  background: rgba(245, 240, 235, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(138, 126, 116, 0.1);
+}
+
+.nav__link--active {
+  color: var(--taupe) !important;
+}
+
+.nav__link--active::after {
+  width: 100% !important;
+}
+
+/* --- Page Hero --- */
+.page-hero {
+  padding-top: clamp(10rem, 18vw, 14rem);
+  padding-bottom: clamp(4rem, 8vw, 7rem);
+  text-align: center;
+  background: var(--bone);
+}
+
+.page-hero__title {
+  font-size: clamp(2.5rem, 5.5vw, 4.5rem);
+  color: var(--charcoal);
+  margin-bottom: 1.5rem;
+}
+
+.page-hero__subtitle {
+  font-size: clamp(0.9375rem, 1.3vw, 1.125rem);
+  font-weight: 300;
+  color: var(--taupe);
+  max-width: 42ch;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* --- Membership Tiers --- */
+.tiers {
+  background: var(--charcoal);
+  padding-top: clamp(3rem, 6vw, 4rem);
+}
+
+.tiers__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  margin-top: 0;
+}
+
+/* --- Tier Card Base --- */
+.tier-card {
+  background: var(--black);
+  border: 1px solid rgba(196, 192, 185, 0.15);
+  padding: 2.5rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: all var(--duration-fast) var(--ease-smooth);
+}
+
+.tier-card:hover {
+  border-color: rgba(196, 192, 185, 0.4);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+  transform: translateY(-4px);
+}
+
+.tier-card__header {
+  margin-bottom: 1rem;
+}
+
+.tier-card__name {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--chrome);
+  margin-bottom: 0.75rem;
+}
+
+.tier-card__price {
+  font-family: var(--font-serif);
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-weight: 400;
+  color: var(--warm-white);
+  line-height: 1;
+}
+
+.tier-card__period {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 300;
+  color: var(--chrome);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.tier-card__desc {
+  font-size: 0.875rem;
+  color: var(--chrome);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.tier-card__divider {
+  margin-bottom: 1.5rem;
+  border-top: 1px solid rgba(196, 192, 185, 0.2);
+}
+
+.tier-card__features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+  flex-grow: 1;
+}
+
+.tier-card__features li {
+  font-size: 0.8125rem;
+  font-weight: 300;
+  color: rgba(253, 251, 247, 0.85);
+  padding-left: 1.5rem;
+  position: relative;
+  line-height: 1.5;
+  opacity: 0.85;
+}
+
+.tier-card__features li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--chrome);
+  font-size: 0.75rem;
+}
+
+.tier-card__cta {
+  width: 100%;
+  justify-content: center;
+  margin-top: auto;
+}
+
+.tier-card .btn--light {
+  color: var(--warm-white);
+  border-color: rgba(253, 251, 247, 0.3);
+}
+
+.tier-card .btn--light:hover {
+  background: rgba(253, 251, 247, 0.08);
+  border-color: var(--warm-white);
+}
+
+/* --- Featured Tier (Signature) --- */
+.tier-card--featured {
+  background: var(--warm-white);
+  border-color: var(--bone);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.4);
+}
+
+.tier-card--featured:hover {
+  border-color: var(--chrome);
+}
+
+.tier-card--featured .tier-card__name {
+  color: var(--taupe);
+}
+
+.tier-card--featured .tier-card__price {
+  color: var(--charcoal);
+}
+
+.tier-card--featured .tier-card__period {
+  color: var(--taupe);
+}
+
+.tier-card--featured .tier-card__desc {
+  color: var(--taupe);
+}
+
+.tier-card--featured .tier-card__features li {
+  color: var(--charcoal);
+}
+
+.tier-card--featured .tier-card__features li::before {
+  color: var(--taupe);
+}
+
+.tier-card--featured .tier-card__divider {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.tier-card__badge {
+  position: absolute;
+  top: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--charcoal);
+  color: var(--warm-white);
+  font-family: var(--font-sans);
+  font-size: 0.625rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  padding: 0.375rem 1.25rem;
+}
+
+/* --- Services Section --- */
+.services {
+  background: var(--bone);
+}
+
+.services__header {
+  margin-bottom: 3.5rem;
+}
+
+.services__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+/* --- Service Card --- */
+.service-card {
+  background: var(--warm-white);
+  border: 1px solid var(--cream);
+  padding: 2.5rem 2rem;
+  transition: all var(--duration-fast) var(--ease-smooth);
+}
+
+.service-card:hover {
+  border-color: var(--chrome);
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.04);
+}
+
+.service-card__icon {
+  color: var(--taupe);
+  margin-bottom: 1.5rem;
+}
+
+.service-card__title {
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--charcoal);
+  margin-bottom: 0.75rem;
+}
+
+.service-card__desc {
+  font-size: 0.875rem;
+  color: var(--taupe);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.service-card__includes {
+  border-top: 1px solid var(--cream);
+  padding-top: 1rem;
+}
+
+.service-card__label {
+  font-family: var(--font-serif);
+  font-size: 0.8125rem;
+  font-style: italic;
+  color: var(--taupe);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.service-card__includes p {
+  font-size: 0.8125rem;
+  color: var(--taupe);
+  line-height: 1.6;
+}
+
+/* --- Add-Ons Section --- */
+.addons {
+  background: var(--warm-white);
+}
+
+.addons__header {
+  margin-bottom: 3.5rem;
+}
+
+.addons__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: var(--cream-dark);
+}
+
+/* --- Addon Item --- */
+.addon-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding: 2rem;
+  background: var(--warm-white);
+  transition: background var(--duration-fast) var(--ease-smooth);
+}
+
+.addon-item:hover {
+  background: var(--bone);
+}
+
+.addon-item__icon {
+  color: var(--taupe);
+  font-size: 0.875rem;
+  flex-shrink: 0;
+  margin-top: 0.125rem;
+}
+
+.addon-item__title {
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--charcoal);
+  margin-bottom: 0.375rem;
+}
+
+.addon-item__desc {
+  font-size: 0.8125rem;
+  color: var(--taupe);
+  line-height: 1.5;
+}
+
+/* --- Concierge Section --- */
+.concierge {
+  background: var(--bone);
+}
+
+.concierge__card {
+  background: var(--charcoal);
+  padding: clamp(2.5rem, 5vw, 4rem);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.concierge__title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  color: var(--warm-white);
+  margin-bottom: 0.75rem;
+}
+
+.concierge__content .eyebrow {
+  color: var(--chrome);
+}
+
+.concierge__desc {
+  font-size: 0.9375rem;
+  color: var(--chrome);
+  line-height: 1.7;
+}
+
+.concierge__features {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.concierge__feature {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: rgba(253, 251, 247, 0.85);
+  font-size: 0.875rem;
+  font-weight: 300;
+}
+
+.concierge__feature svg {
+  color: var(--chrome);
+  flex-shrink: 0;
+}
+
+.concierge__note {
+  grid-column: 1 / -1;
+  text-align: right;
+  font-size: 0.8125rem;
+  color: var(--chrome);
+}
+
+/* --- Closing Statement --- */
+.closing {
+  background: var(--warm-white);
+  text-align: center;
+}
+
+.closing__text {
+  font-family: var(--font-serif);
+  font-size: clamp(1.125rem, 2vw, 1.5rem);
+  font-weight: 400;
+  font-style: italic;
+  color: var(--charcoal);
+  line-height: 1.8;
+  max-width: 40ch;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 1024px) {
+  .tiers__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .services__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .tiers__grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .services__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .addons__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .concierge__card {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .concierge__note {
+    text-align: left;
+  }
+}
