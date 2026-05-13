@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lookbook — Vanity Fur Club</title>
+  <meta name="description" content="The Vanity Fur Club Lookbook — an editorial journey through our luxury concierge dog grooming experience in Los Angeles.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>V</text></svg>">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/index.css">
+
+  <style>
+    /* ── LOOKBOOK PAGE STYLES ─────────────────────────────── */
+
+    .lookbook-hero {
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      padding-bottom: 8rem;
+      background: var(--charcoal);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .lookbook-hero__bg-text {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-serif);
+      font-size: clamp(12rem, 30vw, 28rem);
+      color: rgba(255,255,255,0.04);
+      letter-spacing: -0.02em;
+      user-select: none;
+      pointer-events: none;
+      line-height: 1;
+    }
+
+    .lookbook-hero__content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+    }
+
+    .lookbook-hero__season {
+      display: block;
+      font-family: var(--font-sans);
+      font-size: 0.7rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.45);
+      margin-bottom: 1.5rem;
+    }
+
+    .lookbook-hero__title {
+      font-family: var(--font-serif);
+      font-size: clamp(4rem, 12vw, 9rem);
+      color: var(--bone);
+      text-transform: uppercase;
+      line-height: 0.95;
+      letter-spacing: -0.01em;
+      margin-bottom: 2.5rem;
+    }
+
+    .lookbook-hero__scroll-hint {
+      font-family: var(--font-sans);
+      font-size: 0.7rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .lookbook-hero__scroll-hint::before,
+    .lookbook-hero__scroll-hint::after {
+      content: '';
+      display: block;
+      width: 40px;
+      height: 1px;
+      background: rgba(255,255,255,0.2);
+    }
+
+    /* ── CHAPTER MARKER ───────────────────────────────────── */
+
+    .chapter-marker {
+      padding: 6rem 0 3rem;
+      text-align: center;
+    }
+
+    .chapter-marker__number {
+      font-family: var(--font-serif);
+      font-size: clamp(6rem, 15vw, 12rem);
+      color: #f0ebe3;
+      line-height: 1;
+      letter-spacing: -0.03em;
+      display: block;
+    }
+
+    .chapter-marker__label {
+      font-family: var(--font-sans);
+      font-size: 0.65rem;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      color: var(--taupe);
+      display: block;
+      margin-top: -1rem;
+    }
+
+    .chapter-marker__title {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      color: var(--charcoal);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-top: 1.5rem;
+    }
+
+    /* ── LOOKBOOK EDITORIAL GRID ──────────────────────────── */
+
+    .lb-spread {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* Two-image full-bleed spread */
+    .lb-spread--duo {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Large hero + small stack */
+    .lb-spread--hero-stack {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Full-width bleed */
+    .lb-spread--full {
+      margin-bottom: 0.5rem;
+    }
+
+    .lb-img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    .lb-img--tall {
+      height: clamp(480px, 65vh, 780px);
+    }
+
+    .lb-img--medium {
+      height: clamp(320px, 45vh, 520px);
+    }
+
+    .lb-img--short {
+      height: clamp(240px, 30vh, 360px);
+    }
+
+    .lb-img--cinema {
+      height: clamp(400px, 55vh, 640px);
+    }
+
+    /* ── CAPTION BLOCK ────────────────────────────────────── */
+
+    .lb-caption {
+      padding: 3.5rem 2rem;
+      max-width: 1400px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: end;
+      gap: 2rem;
+    }
+
+    .lb-caption__headline {
+      font-family: var(--font-serif);
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      color: var(--charcoal);
+      text-transform: uppercase;
+      line-height: 1.0;
+      letter-spacing: 0.02em;
+    }
+
+    .lb-caption__body {
+      font-family: var(--font-sans);
+      font-size: 0.9375rem;
+      line-height: 1.85;
+      color: var(--taupe);
+      max-width: 48ch;
+    }
+
+    .lb-caption__body em {
+      font-style: italic;
+      color: var(--charcoal);
+    }
+
+    /* ── PULL QUOTE ───────────────────────────────────────── */
+
+    .lb-pullquote {
+      padding: 6rem 2rem;
+      text-align: center;
+      background: var(--bone, #f5f0e8);
+    }
+
+    .lb-pullquote__mark {
+      font-family: var(--font-serif);
+      font-size: 5rem;
+      color: var(--taupe);
+      line-height: 0.5;
+      display: block;
+      margin-bottom: 1.5rem;
+    }
+
+    .lb-pullquote__text {
+      font-family: var(--font-serif);
+      font-size: clamp(1.6rem, 3.5vw, 2.6rem);
+      color: var(--charcoal);
+      line-height: 1.3;
+      max-width: 22ch;
+      margin: 0 auto 2rem;
+      font-style: italic;
+    }
+
+    .lb-pullquote__attribution {
+      font-family: var(--font-sans);
+      font-size: 0.65rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--taupe);
+    }
+
+    /* ── CONCIERGE DETAIL STRIP ───────────────────────────── */
+
+    .lb-detail-strip {
+      background: var(--charcoal);
+      padding: 5rem 2rem;
+    }
+
+    .lb-detail-strip__inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 4rem;
+    }
+
+    .lb-detail-strip__item {
+      text-align: center;
+    }
+
+    .lb-detail-strip__icon {
+      font-size: 1.5rem;
+      display: block;
+      margin-bottom: 1.5rem;
+      opacity: 0.7;
+    }
+
+    .lb-detail-strip__label {
+      font-family: var(--font-sans);
+      font-size: 0.65rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 0.75rem;
+      display: block;
+    }
+
+    .lb-detail-strip__value {
+      font-family: var(--font-serif);
+      font-size: 1.4rem;
+      color: var(--bone, #f5f0e8);
+      letter-spacing: 0.02em;
+    }
+
+    /* ── CTA CLOSER ───────────────────────────────────────── */
+
+    .lb-cta {
+      padding: 8rem 2rem;
+      text-align: center;
+    }
+
+    .lb-cta__eyebrow {
+      font-family: var(--font-sans);
+      font-size: 0.65rem;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      color: var(--taupe);
+      display: block;
+      margin-bottom: 1.5rem;
+    }
+
+    .lb-cta__title {
+      font-family: var(--font-serif);
+      font-size: clamp(2.5rem, 6vw, 5rem);
+      color: var(--charcoal);
+      text-transform: uppercase;
+      line-height: 1.0;
+      margin-bottom: 2.5rem;
+    }
+
+    /* ── RESPONSIVE ───────────────────────────────────────── */
+
+    @media (max-width: 768px) {
+      .lb-spread--duo,
+      .lb-spread--hero-stack {
+        grid-template-columns: 1fr;
+      }
+
+      .lb-caption {
+        grid-template-columns: 1fr;
+      }
+
+      .lb-detail-strip__inner {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="nav nav--scrolled-always" id="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <div class="nav__left">
+        <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <div class="hamburger-lines">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <span class="nav__menu-text">Menu</span>
+        </button>
+      </div>
+
+      <div class="nav__center">
+        <a href="index.html" class="nav__logo" aria-label="Vanity Fur Club Home">Vanity Fur Club</a>
+      </div>
+
+      <div class="nav__right">
+        <a href="membership.html" class="btn btn--primary" id="nav-cta">Book Appointment</a>
+        <button id="cart-icon-link" aria-label="View Cart" onclick="vfcOpenDrawer()" style="background:none;border:none;cursor:pointer;color:var(--charcoal);position:relative;padding:0.5rem;display:flex;align-items:center;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+          </svg>
+          <span id="cart-count" style="position:absolute;top:-2px;right:-4px;background:var(--charcoal);color:var(--bone);font-size:0.55rem;width:15px;height:15px;border-radius:50%;display:none;align-items:center;justify-content:center;font-family:var(--font-sans);">0</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Main navigation">
+    <a href="membership.html" class="mobile-menu__link">Membership</a>
+    <a href="services.html" class="mobile-menu__link">Services</a>
+    <a href="about.html" class="mobile-menu__link">About</a>
+    <a href="provisions.html" class="mobile-menu__link">Shop the Collection</a>
+    <a href="lookbook.html" class="mobile-menu__link">Lookbook</a>
+    <a href="contact.html" class="mobile-menu__link">Contact Us</a>
+  </div>
+
+  <main>
+
+    <!-- ═══ HERO ═══════════════════════════════════════════ -->
+    <section class="lookbook-hero" id="lookbook-hero">
+      <div class="lookbook-hero__bg-text">VFC</div>
+      <div class="lookbook-hero__content">
+        <span class="lookbook-hero__season">Los Angeles · 2026</span>
+        <h1 class="lookbook-hero__title">Lookbook</h1>
+        <div class="lookbook-hero__scroll-hint">Scroll to explore</div>
+      </div>
+    </section>
+
+    <!-- ═══ CHAPTER I — CONCIERGE ══════════════════════════ -->
+    <section id="concierge">
+
+      <!-- Chapter Marker -->
+      <div class="chapter-marker reveal">
+        <span class="chapter-marker__number">I</span>
+        <span class="chapter-marker__label">Chapter One</span>
+        <h2 class="chapter-marker__title">The Concierge</h2>
+      </div>
+
+      <!-- Full-bleed editorial image — inthecar -->
+      <div class="lb-spread--full reveal">
+        <img
+          src="assets/images/inthecar.PNG"
+          alt="Vanity Fur Club concierge — in the car"
+          class="lb-img lb-img--cinema"
+          style="width:100%; object-position: center bottom;"
+        >
+      </div>
+
+      <!-- Caption -->
+      <div class="lb-caption reveal">
+        <h3 class="lb-caption__headline">Picked Up<br>In Style</h3>
+        <p class="lb-caption__body">
+          From your driveway to our suite — every journey begins the moment we arrive.
+          Our door-to-door concierge is <em>unhurried</em>, <em>white-glove</em>,
+          and designed entirely around your dog's comfort.
+          No kennels. No waiting rooms. Just a calm, attentive escort.
+        </p>
+      </div>
+
+      <!-- Duo spread — inthecar1 + accent -->
+      <div class="lb-spread--duo lb-spread reveal" style="margin-bottom: 0;">
+        <img
+          src="assets/images/inthear1.PNG"
+          alt="Vanity Fur Club concierge — en route"
+          class="lb-img lb-img--tall"
+          style="object-position: center center;"
+        >
+        <div style="background: var(--charcoal); display:flex; align-items:center; justify-content:center; padding: 4rem 3rem;">
+          <div style="text-align:center;">
+            <span style="font-family:var(--font-sans);font-size:0.65rem;letter-spacing:0.4em;text-transform:uppercase;color:rgba(255,255,255,0.4);display:block;margin-bottom:2rem;">The Standard</span>
+            <p style="font-family:var(--font-serif);font-size:clamp(1.8rem,3vw,2.8rem);color:var(--bone, #f5f0e8);line-height:1.2;font-style:italic;max-width:18ch;margin:0 auto 2.5rem;">
+              "Every ride is&nbsp;a&nbsp;first-class experience."
+            </p>
+            <span style="display:block;width:40px;height:1px;background:rgba(255,255,255,0.2);margin:0 auto;"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pull quote -->
+      <div class="lb-pullquote reveal">
+        <span class="lb-pullquote__mark">"</span>
+        <p class="lb-pullquote__text">Luxury isn't a destination — it's the entire journey.</p>
+        <span class="lb-pullquote__attribution">Vanity Fur Club · Concierge Service</span>
+      </div>
+
+      <!-- Concierge detail strip -->
+      <div class="lb-detail-strip reveal">
+        <div class="lb-detail-strip__inner">
+          <div class="lb-detail-strip__item">
+            <span class="lb-detail-strip__icon">🚘</span>
+            <span class="lb-detail-strip__label">Transport</span>
+            <span class="lb-detail-strip__value">Private Vehicle</span>
+          </div>
+          <div class="lb-detail-strip__item">
+            <span class="lb-detail-strip__icon">📍</span>
+            <span class="lb-detail-strip__label">Coverage</span>
+            <span class="lb-detail-strip__value">Los Angeles, CA</span>
+          </div>
+          <div class="lb-detail-strip__item">
+            <span class="lb-detail-strip__icon">🐾</span>
+            <span class="lb-detail-strip__label">Experience</span>
+            <span class="lb-detail-strip__value">Stress-Free · Solo Rides</span>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ═══ CTA CLOSER ══════════════════════════════════════ -->
+    <div class="lb-cta reveal">
+      <span class="lb-cta__eyebrow">Reserve Your Appointment</span>
+      <h2 class="lb-cta__title">Begin the<br>Experience</h2>
+      <a href="membership.html" class="btn btn--primary" id="lookbook-cta-btn">Book Now</a>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div>
+          <div class="footer__logo">Vanity Fur Club</div>
+          <p class="footer__location">Los Angeles, CA</p>
+        </div>
+
+        <ul class="footer__links">
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="membership.html">Membership</a></li>
+          <li><a href="provisions.html">Provisions</a></li>
+          <li><a href="lookbook.html">Lookbook</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="footer__social">
+          <a href="https://www.instagram.com/vanityfurclub/" aria-label="Follow Vanity Fur Club on Instagram">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <circle cx="12" cy="12" r="5"></circle>
+              <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"></circle>
+            </svg>
+          </a>
+          <a href="https://www.tiktok.com/@vanityfurclub" target="_blank" aria-label="Follow Vanity Fur Club on TikTok">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <div class="footer__legal-links" style="margin-bottom: 1rem;">
+          <a href="faq.html" style="margin-right: 1.5rem; color: var(--taupe); text-decoration: none; font-size: 0.875rem;">FAQ</a>
+          <a href="privacy.html" style="margin-right: 1.5rem; color: var(--taupe); text-decoration: none; font-size: 0.875rem;">Privacy Policy</a>
+          <a href="terms.html" style="color: var(--taupe); text-decoration: none; font-size: 0.875rem;">Terms &amp; Conditions</a>
+        </div>
+        &copy; 2026 Vanity Fur Club. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>
