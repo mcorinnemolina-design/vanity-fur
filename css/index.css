@@ -546,8 +546,8 @@ section {
 
 @media (max-width: 768px) {
   .hero__bg img {
-    object-fit: contain;
-    object-position: bottom;
+    object-fit: cover;
+    object-position: center center;
   }
 }
 
@@ -1251,12 +1251,12 @@ section {
   }
 
   .hero {
-    min-height: 80svh;
+    min-height: 100svh;
   }
 
   .hero__bg img {
-    object-fit: contain;
-    object-position: bottom;
+    object-fit: cover;
+    object-position: center center;
   }
 
   .process__grid {
