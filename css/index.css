@@ -1326,3 +1326,28 @@ section {
     order: -1;
   }
 }
+
+/* ============================================
+   MEMBERSHIP — CONCIERGE PHOTO SECTION
+   ============================================ */
+.concierge-photo-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+
+@media (max-width: 768px) {
+  .concierge-photo-row {
+    grid-template-columns: 1fr;
+  }
+
+  .concierge-photo-row > div:first-child img {
+    height: 65vw !important;
+    min-height: 260px;
+  }
+
+  #concierge-photos h3 {
+    font-size: 2rem !important;
+    line-height: 1.2 !important;
+  }
+}
