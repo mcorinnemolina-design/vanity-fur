@@ -61,7 +61,7 @@ function renderCollections(collections) {
             const altText    = p.images.edges.length && p.images.edges[0].node.altText ? p.images.edges[0].node.altText : p.title;
             const price      = parseFloat(p.priceRange.minVariantPrice.amount);
             const fmtPrice   = new Intl.NumberFormat('en-US', { style:'currency', currency: p.priceRange.minVariantPrice.currencyCode || 'USD', minimumFractionDigits:0 }).format(price);
-            const shortDesc  = p.description.length > 80 ? p.description.substring(0, 80) + '...' : p.description;
+            const shortDesc  = p.description.length > 200 ? p.description.substring(0, 200) + '...' : p.description;
             const available  = p.availableForSale;
 
             const btnHtml = available && variantId
