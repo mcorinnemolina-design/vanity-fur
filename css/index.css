@@ -546,7 +546,8 @@ section {
 
 @media (max-width: 768px) {
   .hero__bg img {
-    object-position: 60% center;
+    object-fit: contain;
+    object-position: bottom;
   }
 }
 
@@ -624,7 +625,7 @@ section {
 .corgi-statement__bg {
   position: absolute;
   inset: 0;
-  background-image: url('../assets/images/corgi.png');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/images/corgi.png');
   background-size: cover;
   background-position: center center; /* Restored to center so nose shows */
   z-index: 1;
@@ -641,7 +642,7 @@ section {
 
 .corgi-statement__text {
   font-family: 'Perandory', var(--font-serif);
-  color: #000000;
+  color: #FFFFFF;
   font-size: clamp(1rem, 1.4vw, 1.6rem); /* Greatly increased font size */
   line-height: 1.5;
   letter-spacing: 0.05em;
@@ -1250,11 +1251,12 @@ section {
   }
 
   .hero {
-    min-height: 100svh;
+    min-height: 80svh;
   }
 
   .hero__bg img {
-    object-position: center center;
+    object-fit: contain;
+    object-position: bottom;
   }
 
   .process__grid {

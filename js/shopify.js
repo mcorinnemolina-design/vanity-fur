@@ -70,7 +70,7 @@ function renderCollections(collections) {
 
             return `
               <div class="provisions__card" style="background:#F5F0EB;border:1px solid #D9D3CB;padding:1.5rem;opacity:${available ? '1' : '0.8'};">
-                <img src="${imageUrl}" alt="${altText}" loading="lazy" style="width:100%;aspect-ratio:3/4;object-fit:cover;margin-bottom:1.25rem;background:#EDE8E1;filter:${available ? 'none' : 'grayscale(30%)'};">
+                <img src="${imageUrl}" alt="${altText}" loading="lazy" style="width:100%;aspect-ratio:1/1;object-fit:cover;margin-bottom:1.25rem;background:#EDE8E1;filter:${available ? 'none' : 'grayscale(30%)'};">
                 <h3 style="font-family:'Playfair Display',Georgia,serif;font-size:1.0625rem;font-weight:400;color:#2A211D;margin-bottom:0.375rem;">${p.title}</h3>
                 <p style="font-size:0.8125rem;color:#8A7E74;margin-bottom:0.75rem;line-height:1.5;">${shortDesc}</p>
                 <p style="font-size:0.875rem;font-weight:400;color:#2A211D;margin-bottom:1rem;">${fmtPrice}</p>
