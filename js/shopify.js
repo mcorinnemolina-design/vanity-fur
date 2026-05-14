@@ -13,7 +13,7 @@ async function fetchShopifyCollections() {
         title handle
         products(first: 20) {
           edges { node {
-            id title description availableForSale onlineStoreUrl
+            id title handle description availableForSale onlineStoreUrl
             variants(first: 1) { edges { node { id } } }
             images(first: 1) { edges { node { url altText } } }
             priceRange { minVariantPrice { amount currencyCode } }
@@ -68,10 +68,14 @@ function renderCollections(collections) {
               ? `<button onclick="vfcAddToCart('${variantId}')" style="font-size:0.6875rem;font-weight:400;text-transform:uppercase;letter-spacing:0.1em;color:#8A7E74;border:none;border-bottom:1px solid #C4C0B9;padding-bottom:2px;background:none;cursor:pointer;">Add to Cart</button>`
               : `<span style="font-size:0.6875rem;text-transform:uppercase;letter-spacing:0.1em;color:#C4C0B9;">Out of Stock</span>`;
 
+            const productUrl = p.onlineStoreUrl || `https://${domain}/products/${p.handle}`;
+
             return `
               <div class="provisions__card" style="background:#F5F0EB;border:1px solid #D9D3CB;padding:1.5rem;opacity:${available ? '1' : '0.8'};">
-                <img src="${imageUrl}" alt="${altText}" loading="lazy" style="width:100%;aspect-ratio:1/1;object-fit:cover;margin-bottom:1.25rem;background:#EDE8E1;filter:${available ? 'none' : 'grayscale(30%)'};">
-                <h3 style="font-family:'Playfair Display',Georgia,serif;font-size:1.0625rem;font-weight:400;color:#2A211D;margin-bottom:0.375rem;">${p.title}</h3>
+                <a href="${productUrl}" target="_blank" style="text-decoration:none;color:inherit;display:block;cursor:pointer;">
+                  <img src="${imageUrl}" alt="${altText}" loading="lazy" style="width:100%;aspect-ratio:1/1;object-fit:cover;margin-bottom:1.25rem;background:#EDE8E1;filter:${available ? 'none' : 'grayscale(30%)'};">
+                  <h3 style="font-family:'Playfair Display',Georgia,serif;font-size:1.0625rem;font-weight:400;color:#2A211D;margin-bottom:0.375rem;">${p.title}</h3>
+                </a>
                 <p style="font-size:0.8125rem;color:#8A7E74;margin-bottom:0.75rem;line-height:1.5;">${shortDesc}</p>
                 <p style="font-size:0.875rem;font-weight:400;color:#2A211D;margin-bottom:1rem;">${fmtPrice}</p>
                 ${btnHtml}
