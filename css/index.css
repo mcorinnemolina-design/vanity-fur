@@ -547,7 +547,7 @@ section {
 @media (max-width: 768px) {
   .hero__bg img {
     object-fit: cover;
-    object-position: 80% center;
+    object-position: center center;
   }
 }
 
@@ -1256,7 +1256,7 @@ section {
 
   .hero__bg img {
     object-fit: cover;
-    object-position: 80% center;
+    object-position: center center;
   }
 
   .hero__content {

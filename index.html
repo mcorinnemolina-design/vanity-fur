@@ -17,7 +17,7 @@
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>V</text></svg>">
 
   <!-- Styles -->
-  <link rel="stylesheet" href="css/index.css?v=37">
+  <link rel="stylesheet" href="css/index.css?v=38">
   <style>
     /* Hide Shopify's default green floating toggle */
     .shopify-buy-frame--toggle { display: none !important; }
@@ -102,7 +102,10 @@
          ============================================ -->
     <section class="hero" id="hero">
       <div class="hero__bg" id="hero-image">
-        <img src="assets/images/miloside1.png" alt="Milo and friend">
+        <picture>
+          <source media="(max-width: 768px)" srcset="assets/images/milo-hero-final.png">
+          <img src="assets/images/miloside1.png" alt="Milo and friend">
+        </picture>
       </div>
       <div class="hero__overlay"></div>
       <div class="hero__content" style="padding-top: clamp(3rem, 8vw, 6rem);">
