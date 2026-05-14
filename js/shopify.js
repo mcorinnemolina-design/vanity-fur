@@ -179,7 +179,15 @@ function renderCollections(collections) {
 
   const valid = collections.filter(c => c.products.edges.length > 0 && c.handle !== 'frontpage');
   const isHome = window.location.pathname === '/' || window.location.pathname.endsWith('index.html');
-  const toRender = isHome ? valid.slice(0, 1) : valid;
+  
+  let toRender;
+  if (isHome) {
+    // Prioritize "Pantry Treats" for the home page
+    const pantryTreats = valid.find(c => c.handle === 'premium-treats');
+    toRender = pantryTreats ? [pantryTreats] : valid.slice(0, 1);
+  } else {
+    toRender = valid;
+  }
 
   toRender.forEach(collection => {
     const html = `
