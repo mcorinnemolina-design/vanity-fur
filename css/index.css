@@ -734,6 +734,16 @@ section {
   gap: 1.5rem;
 }
 
+.experience__title {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 1.1;
+}
+
+.experience__subtitle {
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
 .experience__block h3 {
   font-family: var(--font-sans);
   font-size: 0.75rem;
@@ -1279,6 +1289,16 @@ section {
 
   .experience__image {
     order: -1;
+  }
+
+  .experience__title {
+    font-size: 6.5vw; /* Adjusted to fit on one line */
+    white-space: nowrap;
+  }
+
+  .experience__subtitle {
+    font-size: 1rem;
+    margin-top: 1rem !important;
   }
 
   .provisions__grid {
