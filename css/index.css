@@ -1259,6 +1259,10 @@ section {
     object-position: center center;
   }
 
+  .hero__content {
+    margin-top: 12dvh;
+  }
+
   .process__grid {
     grid-template-columns: 1fr;
     gap: 0;
