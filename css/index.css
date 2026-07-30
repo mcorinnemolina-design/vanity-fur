@@ -951,9 +951,97 @@ section {
 
 .footer__inner {
   display: grid;
-  grid-template-columns: 1fr auto auto;
+  grid-template-columns: 1fr 1.2fr auto auto;
   gap: clamp(2rem, 4vw, 4rem);
   align-items: start;
+}
+
+/* --- Footer Newsletter (Klaviyo) --- */
+.footer__newsletter {
+  max-width: 380px;
+}
+
+.footer__newsletter-title {
+  font-family: 'Perandory', var(--font-serif);
+  font-size: 1.125rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--warm-white);
+  margin-bottom: 0.5rem;
+}
+
+.footer__newsletter-desc {
+  font-size: 0.8125rem;
+  color: var(--chrome);
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.footer__newsletter-field {
+  display: flex;
+  align-items: center;
+  position: relative;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(196, 192, 185, 0.3);
+  border-radius: 2px;
+  transition: border-color var(--duration-fast) var(--ease-smooth);
+}
+
+.footer__newsletter-field:focus-within {
+  border-color: var(--warm-white);
+}
+
+.footer__newsletter-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: transparent;
+  border: none;
+  color: var(--warm-white);
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  outline: none;
+}
+
+.footer__newsletter-input::placeholder {
+  color: rgba(196, 192, 185, 0.5);
+}
+
+.footer__newsletter-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.75rem 1.25rem;
+  background: var(--bone);
+  color: var(--charcoal);
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border: none;
+  transition: background-color var(--duration-fast) var(--ease-smooth), color var(--duration-fast) var(--ease-smooth);
+  white-space: nowrap;
+}
+
+.footer__newsletter-btn:hover {
+  background: var(--warm-white);
+  color: var(--headline-black);
+}
+
+.footer__newsletter-message {
+  font-size: 0.75rem;
+  margin-top: 0.5rem;
+  min-height: 1.25em;
+  transition: opacity 0.3s ease;
+}
+
+.footer__newsletter-message.success {
+  color: #A3C9A8;
+}
+
+.footer__newsletter-message.error {
+  color: #E5989B;
 }
 
 .footer__logo {

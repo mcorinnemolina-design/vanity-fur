@@ -23,6 +23,29 @@
             const serviceID = 'service_zym85cm';
             const templateID = 'template_o0ng9yj';
 
+            // Identify & Track in Klaviyo
+            if (window._learnq) {
+              const formData = new FormData(this);
+              const userEmail = formData.get('user_email');
+              const userName = formData.get('user_name');
+              const userPhone = formData.get('user_phone');
+              const userMessage = formData.get('message');
+
+              if (userEmail) {
+                window._learnq.push(['identify', {
+                  '$email': userEmail,
+                  '$first_name': userName || '',
+                  '$phone_number': userPhone || '',
+                  '$source': 'Contact Form'
+                }]);
+                window._learnq.push(['track', 'Submitted Contact Form', {
+                  'Name': userName,
+                  'Phone': userPhone,
+                  'Message': userMessage
+                }]);
+              }
+            }
+
             emailjs.sendForm(serviceID, templateID, this)
                 .then(() => {
                     formStatus.style.color = 'green';
