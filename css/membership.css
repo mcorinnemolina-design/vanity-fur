@@ -85,6 +85,20 @@
   margin-bottom: 0.75rem;
 }
 
+.tier-card__starting {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--chrome);
+  margin-bottom: 0.25rem;
+}
+
+.tier-card--featured .tier-card__starting {
+  color: var(--taupe);
+}
+
 .tier-card__price {
   font-family: var(--font-serif);
   font-size: clamp(2.5rem, 4vw, 3.5rem);

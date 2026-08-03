@@ -15,8 +15,8 @@
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>V</text></svg>">
 
   <!-- Styles -->
-  <link rel="stylesheet" href="css/index.css?v=41">
-  <link rel="stylesheet" href="css/membership.css">
+  <link rel="stylesheet" href="css/index.css?v=99">
+  <link rel="stylesheet" href="css/membership.css?v=99">
 </head>
 <body>
 
@@ -64,8 +64,6 @@
     <a href="contact.html" class="mobile-menu__link">Contact Us</a>
   </div>
 
-
-
   <main>
 
     <!-- ============================================
@@ -91,9 +89,12 @@
           <!-- Essential -->
           <div class="tier-card reveal" id="tier-essential">
             <div class="tier-card__header">
-              <h3 class="tier-card__name">Essential</h3>
-              <div class="tier-card__price">$135</div>
-              <span class="tier-card__period">/ month</span>
+              <h3 class="tier-card__name">Essential Membership</h3>
+              <div class="tier-card__starting" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--chrome); margin-bottom: 0.25rem;">Starting at</div>
+              <div class="tier-card__price" style="display: flex; align-items: baseline; gap: 0.25rem;">
+                <span style="font-family: var(--font-serif); font-size: clamp(2.5rem, 4vw, 3.5rem); font-weight: 400; color: var(--warm-white); line-height: 1;">$145</span>
+                <span class="tier-card__period" style="font-family: var(--font-sans); font-size: 0.8125rem; color: var(--chrome); text-transform: uppercase;">/ month</span>
+              </div>
             </div>
             <p class="tier-card__desc">A refined introduction to Vanity Fur.</p>
             <hr class="divider tier-card__divider">
@@ -109,9 +110,12 @@
           <div class="tier-card tier-card--featured reveal" id="tier-signature">
             <div class="tier-card__badge">Most Popular</div>
             <div class="tier-card__header">
-              <h3 class="tier-card__name">Signature</h3>
-              <div class="tier-card__price">$185</div>
-              <span class="tier-card__period">/ month</span>
+              <h3 class="tier-card__name">Signature Membership</h3>
+              <div class="tier-card__starting" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--taupe); margin-bottom: 0.25rem;">Starting at</div>
+              <div class="tier-card__price" style="display: flex; align-items: baseline; gap: 0.25rem;">
+                <span style="font-family: var(--font-serif); font-size: clamp(2.5rem, 4vw, 3.5rem); font-weight: 400; color: var(--charcoal); line-height: 1;">$195</span>
+                <span class="tier-card__period" style="font-family: var(--font-sans); font-size: 0.8125rem; color: var(--taupe); text-transform: uppercase;">/ month</span>
+              </div>
             </div>
             <p class="tier-card__desc">Everything your dog needs, on a consistent schedule.</p>
             <hr class="divider tier-card__divider">
@@ -129,9 +133,12 @@
           <!-- Elite -->
           <div class="tier-card reveal" id="tier-elite">
             <div class="tier-card__header">
-              <h3 class="tier-card__name">Elite</h3>
-              <div class="tier-card__price">$320</div>
-              <span class="tier-card__period">/ month</span>
+              <h3 class="tier-card__name">Elite Membership</h3>
+              <div class="tier-card__starting" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--chrome); margin-bottom: 0.25rem;">Starting at</div>
+              <div class="tier-card__price" style="display: flex; align-items: baseline; gap: 0.25rem;">
+                <span style="font-family: var(--font-serif); font-size: clamp(2.5rem, 4vw, 3.5rem); font-weight: 400; color: var(--warm-white); line-height: 1;">$345</span>
+                <span class="tier-card__period" style="font-family: var(--font-sans); font-size: 0.8125rem; color: var(--chrome); text-transform: uppercase;">/ month</span>
+              </div>
             </div>
             <p class="tier-card__desc">For homes with more than one pup.</p>
             <hr class="divider tier-card__divider">
@@ -145,6 +152,13 @@
             <a href="contact.html" class="btn btn--light tier-card__cta" id="cta-elite">Join the Club</a>
           </div>
 
+        </div>
+
+        <!-- Pricing Disclaimer Note -->
+        <div class="tiers__disclaimer reveal" style="text-align: center; margin-top: 3.5rem; padding: 1.25rem 2rem; background: rgba(253, 251, 247, 0.05); border: 1px dashed rgba(196, 192, 185, 0.25); border-radius: 4px; max-width: 680px; margin-left: auto; margin-right: auto;">
+          <p style="font-family: var(--font-sans); font-size: 0.875rem; color: var(--warm-white); letter-spacing: 0.04em; margin: 0; opacity: 0.95;">
+            * Prices are based off size, coat, condition, and individual care requirements.
+          </p>
         </div>
       </div>
     </section>
