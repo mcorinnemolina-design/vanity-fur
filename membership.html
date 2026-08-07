@@ -84,144 +84,86 @@
          ============================================ -->
     <section class="tiers" id="tiers">
       <div class="container">
-        <div class="tiers__grid" style="grid-template-columns: repeat(3, 1fr);">
+        <!-- Shared Perks — listed once -->
+        <div class="reveal" style="text-align: center; margin-bottom: 3rem;">
+          <span style="font-family: var(--font-sans); font-size: 0.65rem; letter-spacing: 0.35em; text-transform: uppercase; color: var(--chrome);">Every Membership Includes</span>
+          <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0.6rem 2rem; margin-top: 1.25rem;">
+            <span style="font-family: var(--font-sans); font-size: 0.8rem; color: rgba(245,240,235,0.85); letter-spacing: 0.04em; display: flex; align-items: center; gap: 0.4rem;"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>1 Signature Groom per month</span>
+            <span style="font-family: var(--font-sans); font-size: 0.8rem; color: rgba(245,240,235,0.85); letter-spacing: 0.04em; display: flex; align-items: center; gap: 0.4rem;"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>White-glove pickup &amp; drop-off</span>
+            <span style="font-family: var(--font-sans); font-size: 0.8rem; color: rgba(245,240,235,0.85); letter-spacing: 0.04em; display: flex; align-items: center; gap: 0.4rem;"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>15% off add-ons</span>
+            <span style="font-family: var(--font-sans); font-size: 0.8rem; color: rgba(245,240,235,0.85); letter-spacing: 0.04em; display: flex; align-items: center; gap: 0.4rem;"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Priority booking</span>
+            <span style="font-family: var(--font-sans); font-size: 0.8rem; color: rgba(245,240,235,0.85); letter-spacing: 0.04em; display: flex; align-items: center; gap: 0.4rem;"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Personalized grooming profile</span>
+            <span style="font-family: var(--font-sans); font-size: 0.8rem; color: rgba(245,240,235,0.85); letter-spacing: 0.04em; display: flex; align-items: center; gap: 0.4rem;"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Member-only product access</span>
+          </div>
+        </div>
 
-          <!-- Piccolo -->
-          <div class="tier-card reveal" id="tier-piccolo">
-            <div class="tier-card__header">
-              <h3 class="tier-card__name">Piccolo</h3>
-              <div class="tier-card__starting" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--chrome); margin-bottom: 0.25rem;">0–10 lbs</div>
-              <div class="tier-card__price" style="display: flex; align-items: baseline; gap: 0.25rem;">
-                <span style="font-family: var(--font-serif); font-size: clamp(2.5rem, 4vw, 3.5rem); font-weight: 400; color: var(--warm-white); line-height: 1;">$145</span>
-                <span class="tier-card__period" style="font-family: var(--font-sans); font-size: 0.8125rem; color: var(--chrome); text-transform: uppercase;">/ month</span>
-              </div>
+        <!-- Compact Pricing Grid -->
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;">
+
+          <div class="tier-card reveal" id="tier-piccolo" style="padding: 1.75rem 1.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
+            <div style="font-family: var(--font-sans); font-size: 0.65rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--chrome);">Piccolo</div>
+            <div style="font-family: var(--font-sans); font-size: 0.75rem; color: var(--taupe);">0–10 lbs</div>
+            <div style="display: flex; align-items: baseline; gap: 0.2rem; margin-top: 0.25rem;">
+              <span style="font-family: var(--font-serif); font-size: 2.25rem; font-weight: 400; color: var(--warm-white); line-height: 1;">$145</span>
+              <span style="font-family: var(--font-sans); font-size: 0.75rem; color: var(--chrome); text-transform: uppercase;">/ mo</span>
             </div>
-            <hr class="divider tier-card__divider">
-            <ul class="tier-card__features">
-              <li>1 Signature Groom per month</li>
-              <li>White-glove pickup &amp; drop-off</li>
-              <li>15% off add-ons</li>
-              <li>Priority booking</li>
-              <li>Personalized grooming profile</li>
-              <li>Member-only product access</li>
-            </ul>
-            <a href="contact.html" class="btn btn--light tier-card__cta" id="cta-piccolo">Join the Club</a>
+            <a href="contact.html" class="btn btn--light" id="cta-piccolo" style="margin-top: 1rem; text-align: center; padding: 0.6rem 1rem; font-size: 0.75rem;">Join the Club</a>
           </div>
 
-          <!-- Classico -->
-          <div class="tier-card reveal" id="tier-classico">
-            <div class="tier-card__header">
-              <h3 class="tier-card__name">Classico</h3>
-              <div class="tier-card__starting" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--chrome); margin-bottom: 0.25rem;">11–25 lbs</div>
-              <div class="tier-card__price" style="display: flex; align-items: baseline; gap: 0.25rem;">
-                <span style="font-family: var(--font-serif); font-size: clamp(2.5rem, 4vw, 3.5rem); font-weight: 400; color: var(--warm-white); line-height: 1;">$155</span>
-                <span class="tier-card__period" style="font-family: var(--font-sans); font-size: 0.8125rem; color: var(--chrome); text-transform: uppercase;">/ month</span>
-              </div>
+          <div class="tier-card reveal" id="tier-classico" style="padding: 1.75rem 1.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
+            <div style="font-family: var(--font-sans); font-size: 0.65rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--chrome);">Classico</div>
+            <div style="font-family: var(--font-sans); font-size: 0.75rem; color: var(--taupe);">11–25 lbs</div>
+            <div style="display: flex; align-items: baseline; gap: 0.2rem; margin-top: 0.25rem;">
+              <span style="font-family: var(--font-serif); font-size: 2.25rem; font-weight: 400; color: var(--warm-white); line-height: 1;">$155</span>
+              <span style="font-family: var(--font-sans); font-size: 0.75rem; color: var(--chrome); text-transform: uppercase;">/ mo</span>
             </div>
-            <hr class="divider tier-card__divider">
-            <ul class="tier-card__features">
-              <li>1 Signature Groom per month</li>
-              <li>White-glove pickup &amp; drop-off</li>
-              <li>15% off add-ons</li>
-              <li>Priority booking</li>
-              <li>Personalized grooming profile</li>
-              <li>Member-only product access</li>
-            </ul>
-            <a href="contact.html" class="btn btn--light tier-card__cta" id="cta-classico">Join the Club</a>
+            <a href="contact.html" class="btn btn--light" id="cta-classico" style="margin-top: 1rem; text-align: center; padding: 0.6rem 1rem; font-size: 0.75rem;">Join the Club</a>
           </div>
 
-          <!-- Imperiale -->
-          <div class="tier-card reveal" id="tier-imperiale">
-            <div class="tier-card__header">
-              <h3 class="tier-card__name">Imperiale</h3>
-              <div class="tier-card__starting" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--chrome); margin-bottom: 0.25rem;">26–40 lbs</div>
-              <div class="tier-card__price" style="display: flex; align-items: baseline; gap: 0.25rem;">
-                <span style="font-family: var(--font-serif); font-size: clamp(2.5rem, 4vw, 3.5rem); font-weight: 400; color: var(--warm-white); line-height: 1;">$175</span>
-                <span class="tier-card__period" style="font-family: var(--font-sans); font-size: 0.8125rem; color: var(--chrome); text-transform: uppercase;">/ month</span>
-              </div>
+          <div class="tier-card reveal" id="tier-imperiale" style="padding: 1.75rem 1.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
+            <div style="font-family: var(--font-sans); font-size: 0.65rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--chrome);">Imperiale</div>
+            <div style="font-family: var(--font-sans); font-size: 0.75rem; color: var(--taupe);">26–40 lbs</div>
+            <div style="display: flex; align-items: baseline; gap: 0.2rem; margin-top: 0.25rem;">
+              <span style="font-family: var(--font-serif); font-size: 2.25rem; font-weight: 400; color: var(--warm-white); line-height: 1;">$175</span>
+              <span style="font-family: var(--font-sans); font-size: 0.75rem; color: var(--chrome); text-transform: uppercase;">/ mo</span>
             </div>
-            <hr class="divider tier-card__divider">
-            <ul class="tier-card__features">
-              <li>1 Signature Groom per month</li>
-              <li>White-glove pickup &amp; drop-off</li>
-              <li>15% off add-ons</li>
-              <li>Priority booking</li>
-              <li>Personalized grooming profile</li>
-              <li>Member-only product access</li>
-            </ul>
-            <a href="contact.html" class="btn btn--light tier-card__cta" id="cta-imperiale">Join the Club</a>
+            <a href="contact.html" class="btn btn--light" id="cta-imperiale" style="margin-top: 1rem; text-align: center; padding: 0.6rem 1rem; font-size: 0.75rem;">Join the Club</a>
           </div>
 
-          <!-- Grande -->
-          <div class="tier-card reveal" id="tier-grande">
-            <div class="tier-card__header">
-              <h3 class="tier-card__name">Grande</h3>
-              <div class="tier-card__starting" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--chrome); margin-bottom: 0.25rem;">41–70 lbs</div>
-              <div class="tier-card__price" style="display: flex; align-items: baseline; gap: 0.25rem;">
-                <span style="font-family: var(--font-serif); font-size: clamp(2.5rem, 4vw, 3.5rem); font-weight: 400; color: var(--warm-white); line-height: 1;">$225</span>
-                <span class="tier-card__period" style="font-family: var(--font-sans); font-size: 0.8125rem; color: var(--chrome); text-transform: uppercase;">/ month</span>
-              </div>
+          <div class="tier-card reveal" id="tier-grande" style="padding: 1.75rem 1.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
+            <div style="font-family: var(--font-sans); font-size: 0.65rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--chrome);">Grande</div>
+            <div style="font-family: var(--font-sans); font-size: 0.75rem; color: var(--taupe);">41–70 lbs</div>
+            <div style="display: flex; align-items: baseline; gap: 0.2rem; margin-top: 0.25rem;">
+              <span style="font-family: var(--font-serif); font-size: 2.25rem; font-weight: 400; color: var(--warm-white); line-height: 1;">$225</span>
+              <span style="font-family: var(--font-sans); font-size: 0.75rem; color: var(--chrome); text-transform: uppercase;">/ mo</span>
             </div>
-            <hr class="divider tier-card__divider">
-            <ul class="tier-card__features">
-              <li>1 Signature Groom per month</li>
-              <li>White-glove pickup &amp; drop-off</li>
-              <li>15% off add-ons</li>
-              <li>Priority booking</li>
-              <li>Personalized grooming profile</li>
-              <li>Member-only product access</li>
-            </ul>
-            <a href="contact.html" class="btn btn--light tier-card__cta" id="cta-grande">Join the Club</a>
+            <a href="contact.html" class="btn btn--light" id="cta-grande" style="margin-top: 1rem; text-align: center; padding: 0.6rem 1rem; font-size: 0.75rem;">Join the Club</a>
           </div>
 
-          <!-- Elegante -->
-          <div class="tier-card reveal" id="tier-elegante">
-            <div class="tier-card__header">
-              <h3 class="tier-card__name">Elegante</h3>
-              <div class="tier-card__starting" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--chrome); margin-bottom: 0.25rem;">71–100 lbs</div>
-              <div class="tier-card__price" style="display: flex; align-items: baseline; gap: 0.25rem;">
-                <span style="font-family: var(--font-serif); font-size: clamp(2.5rem, 4vw, 3.5rem); font-weight: 400; color: var(--warm-white); line-height: 1;">$245</span>
-                <span class="tier-card__period" style="font-family: var(--font-sans); font-size: 0.8125rem; color: var(--chrome); text-transform: uppercase;">/ month</span>
-              </div>
+          <div class="tier-card reveal" id="tier-elegante" style="padding: 1.75rem 1.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
+            <div style="font-family: var(--font-sans); font-size: 0.65rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--chrome);">Elegante</div>
+            <div style="font-family: var(--font-sans); font-size: 0.75rem; color: var(--taupe);">71–100 lbs</div>
+            <div style="display: flex; align-items: baseline; gap: 0.2rem; margin-top: 0.25rem;">
+              <span style="font-family: var(--font-serif); font-size: 2.25rem; font-weight: 400; color: var(--warm-white); line-height: 1;">$245</span>
+              <span style="font-family: var(--font-sans); font-size: 0.75rem; color: var(--chrome); text-transform: uppercase;">/ mo</span>
             </div>
-            <hr class="divider tier-card__divider">
-            <ul class="tier-card__features">
-              <li>1 Signature Groom per month</li>
-              <li>White-glove pickup &amp; drop-off</li>
-              <li>15% off add-ons</li>
-              <li>Priority booking</li>
-              <li>Personalized grooming profile</li>
-              <li>Member-only product access</li>
-            </ul>
-            <a href="contact.html" class="btn btn--light tier-card__cta" id="cta-elegante">Join the Club</a>
+            <a href="contact.html" class="btn btn--light" id="cta-elegante" style="margin-top: 1rem; text-align: center; padding: 0.6rem 1rem; font-size: 0.75rem;">Join the Club</a>
           </div>
 
-          <!-- Maestoso -->
-          <div class="tier-card reveal" id="tier-maestoso">
-            <div class="tier-card__header">
-              <h3 class="tier-card__name">Maestoso</h3>
-              <div class="tier-card__starting" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--chrome); margin-bottom: 0.25rem;">101–160 lbs</div>
-              <div class="tier-card__price" style="display: flex; align-items: baseline; gap: 0.25rem;">
-                <span style="font-family: var(--font-serif); font-size: clamp(2.5rem, 4vw, 3.5rem); font-weight: 400; color: var(--warm-white); line-height: 1;">$285</span>
-                <span class="tier-card__period" style="font-family: var(--font-sans); font-size: 0.8125rem; color: var(--chrome); text-transform: uppercase;">/ month</span>
-              </div>
+          <div class="tier-card reveal" id="tier-maestoso" style="padding: 1.75rem 1.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
+            <div style="font-family: var(--font-sans); font-size: 0.65rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--chrome);">Maestoso</div>
+            <div style="font-family: var(--font-sans); font-size: 0.75rem; color: var(--taupe);">101–160 lbs</div>
+            <div style="display: flex; align-items: baseline; gap: 0.2rem; margin-top: 0.25rem;">
+              <span style="font-family: var(--font-serif); font-size: 2.25rem; font-weight: 400; color: var(--warm-white); line-height: 1;">$285</span>
+              <span style="font-family: var(--font-sans); font-size: 0.75rem; color: var(--chrome); text-transform: uppercase;">/ mo</span>
             </div>
-            <hr class="divider tier-card__divider">
-            <ul class="tier-card__features">
-              <li>1 Signature Groom per month</li>
-              <li>White-glove pickup &amp; drop-off</li>
-              <li>15% off add-ons</li>
-              <li>Priority booking</li>
-              <li>Personalized grooming profile</li>
-              <li>Member-only product access</li>
-            </ul>
-            <a href="contact.html" class="btn btn--light tier-card__cta" id="cta-maestoso">Join the Club</a>
+            <a href="contact.html" class="btn btn--light" id="cta-maestoso" style="margin-top: 1rem; text-align: center; padding: 0.6rem 1rem; font-size: 0.75rem;">Join the Club</a>
           </div>
 
         </div>
 
         <!-- Pricing Disclaimer Note -->
-        <div class="tiers__disclaimer reveal" style="text-align: center; margin-top: 3.5rem; padding: 1.25rem 2rem; background: rgba(253, 251, 247, 0.05); border: 1px dashed rgba(196, 192, 185, 0.25); border-radius: 4px; max-width: 680px; margin-left: auto; margin-right: auto;">
+        <div class="tiers__disclaimer reveal" style="text-align: center; margin-top: 2.5rem; padding: 1.25rem 2rem; background: rgba(253, 251, 247, 0.05); border: 1px dashed rgba(196, 192, 185, 0.25); border-radius: 4px; max-width: 680px; margin-left: auto; margin-right: auto;">
           <p style="font-family: var(--font-sans); font-size: 0.875rem; color: var(--warm-white); letter-spacing: 0.04em; margin: 0; opacity: 0.95;">
             * Prices are based off size, coat, condition, and individual care requirements.
           </p>
