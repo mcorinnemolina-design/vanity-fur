@@ -106,109 +106,48 @@
           </div>
         </div>
 
-        <!-- Master Featured Plan Card -->
-        <div class="reveal" style="max-width: 660px; margin: 0 auto 4rem; background: var(--black); border: 1px solid rgba(196, 192, 185, 0.25); border-radius: 8px; padding: 2.75rem 2rem; text-align: center; box-shadow: 0 16px 48px rgba(0,0,0,0.4); position: relative;">
+        <!-- Master Featured Plan Card with What's Included Directly Inside -->
+        <div class="reveal" style="max-width: 680px; margin: 0 auto 4.5rem; background: var(--black); border: 1px solid rgba(196, 192, 185, 0.25); border-radius: 8px; padding: 2.75rem 2.25rem; text-align: center; box-shadow: 0 16px 48px rgba(0,0,0,0.4); position: relative;">
           <div id="active-tier-name" style="font-family: var(--font-sans); font-size: 0.8rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--chrome); margin-bottom: 0.35rem;">Piccolo Membership</div>
           <div id="active-tier-weight" style="font-family: var(--font-sans); font-size: 0.9rem; color: var(--taupe); margin-bottom: 1.25rem;">Weight Bracket: 0–25 lbs</div>
           
-          <div style="display: flex; align-items: baseline; justify-content: center; gap: 0.4rem; margin-bottom: 1.5rem;">
+          <div style="display: flex; align-items: baseline; justify-content: center; gap: 0.4rem; margin-bottom: 2rem;">
             <span id="active-tier-price" style="font-family: var(--font-serif); font-size: clamp(3.5rem, 7vw, 4.75rem); font-weight: 400; color: var(--warm-white); line-height: 1;">$155</span>
             <span style="font-family: var(--font-sans); font-size: 0.875rem; color: var(--chrome); text-transform: uppercase; letter-spacing: 0.08em;">/ month</span>
           </div>
 
-          <p id="active-tier-desc" style="font-family: var(--font-sans); font-size: 0.875rem; color: rgba(253,251,247,0.7); max-width: 44ch; margin: 0 auto 2rem; line-height: 1.6;">
-            Designed for toy and small breeds. Includes complete signature styling, private concierge transport, and personalized care.
-          </p>
+          <!-- What's Included Directly Inside the Card -->
+          <div style="border-top: 1px solid rgba(196, 192, 185, 0.15); border-bottom: 1px solid rgba(196, 192, 185, 0.15); padding: 1.75rem 0.5rem; margin-bottom: 2rem; text-align: left;">
+            <div style="font-family: var(--font-sans); font-size: 0.65rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--taupe); text-align: center; margin-bottom: 1.25rem;">Every Membership Includes</div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0.85rem 1.5rem;">
+              <div style="font-family: var(--font-sans); font-size: 0.85rem; color: rgba(253,251,247,0.9); display: flex; align-items: center; gap: 0.5rem;">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--taupe)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                1 Signature Groom per Month
+              </div>
+              <div style="font-family: var(--font-sans); font-size: 0.85rem; color: rgba(253,251,247,0.9); display: flex; align-items: center; gap: 0.5rem;">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--taupe)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                White-Glove Pickup &amp; Drop-Off
+              </div>
+              <div style="font-family: var(--font-sans); font-size: 0.85rem; color: rgba(253,251,247,0.9); display: flex; align-items: center; gap: 0.5rem;">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--taupe)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                15% Off All Add-Ons &amp; Treatments
+              </div>
+              <div style="font-family: var(--font-sans); font-size: 0.85rem; color: rgba(253,251,247,0.9); display: flex; align-items: center; gap: 0.5rem;">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--taupe)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                Priority &amp; Weekend Booking Access
+              </div>
+              <div style="font-family: var(--font-sans); font-size: 0.85rem; color: rgba(253,251,247,0.9); display: flex; align-items: center; gap: 0.5rem;">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--taupe)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                Personalized Canine Styling Profile
+              </div>
+              <div style="font-family: var(--font-sans); font-size: 0.85rem; color: rgba(253,251,247,0.9); display: flex; align-items: center; gap: 0.5rem;">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--taupe)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                Member-Only Provisions Access
+              </div>
+            </div>
+          </div>
 
           <a href="contact.html" class="btn btn--primary" id="active-tier-cta" style="display: inline-block; width: 100%; max-width: 320px; padding: 1.05rem 2rem; font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.15em;">Join the Club</a>
-        </div>
-
-        <!-- ============================================
-             WHAT EVERY VISIT INCLUDES (BEIGE & CLEAN)
-             ============================================ -->
-        <div class="reveal" style="margin-bottom: 4.5rem; background: var(--cream-dark); border-radius: 8px; padding: 3.5rem 2.5rem; color: var(--charcoal);">
-          <div style="text-align: center; margin-bottom: 2.5rem;">
-            <span class="eyebrow" style="color: var(--taupe); letter-spacing: 0.25em;">Full Suite of Care</span>
-            <h3 style="font-family: var(--font-serif); font-size: clamp(1.75rem, 3.5vw, 2.35rem); color: var(--charcoal); margin-top: 0.4rem; text-transform: uppercase;">What's Included in Every Monthly Visit</h3>
-          </div>
-
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem;">
-            
-            <div style="background: rgba(255, 255, 255, 0.75); border: 1px solid rgba(138, 126, 116, 0.15); border-radius: 6px; padding: 1.5rem 1.75rem; text-align: center;">
-              <h4 style="font-family: var(--font-sans); font-size: 0.9375rem; font-weight: 500; color: var(--charcoal); margin: 0; letter-spacing: 0.04em;">
-                1 Signature Groom per Month
-              </h4>
-            </div>
-
-            <div style="background: rgba(255, 255, 255, 0.75); border: 1px solid rgba(138, 126, 116, 0.15); border-radius: 6px; padding: 1.5rem 1.75rem; text-align: center;">
-              <h4 style="font-family: var(--font-sans); font-size: 0.9375rem; font-weight: 500; color: var(--charcoal); margin: 0; letter-spacing: 0.04em;">
-                White-Glove Pickup &amp; Drop-Off
-              </h4>
-            </div>
-
-            <div style="background: rgba(255, 255, 255, 0.75); border: 1px solid rgba(138, 126, 116, 0.15); border-radius: 6px; padding: 1.5rem 1.75rem; text-align: center;">
-              <h4 style="font-family: var(--font-sans); font-size: 0.9375rem; font-weight: 500; color: var(--charcoal); margin: 0; letter-spacing: 0.04em;">
-                15% Off All Add-Ons &amp; Treatments
-              </h4>
-            </div>
-
-            <div style="background: rgba(255, 255, 255, 0.75); border: 1px solid rgba(138, 126, 116, 0.15); border-radius: 6px; padding: 1.5rem 1.75rem; text-align: center;">
-              <h4 style="font-family: var(--font-sans); font-size: 0.9375rem; font-weight: 500; color: var(--charcoal); margin: 0; letter-spacing: 0.04em;">
-                Priority &amp; Weekend Booking Access
-              </h4>
-            </div>
-
-            <div style="background: rgba(255, 255, 255, 0.75); border: 1px solid rgba(138, 126, 116, 0.15); border-radius: 6px; padding: 1.5rem 1.75rem; text-align: center;">
-              <h4 style="font-family: var(--font-sans); font-size: 0.9375rem; font-weight: 500; color: var(--charcoal); margin: 0; letter-spacing: 0.04em;">
-                Personalized Canine Styling Profile
-              </h4>
-            </div>
-
-            <div style="background: rgba(255, 255, 255, 0.75); border: 1px solid rgba(138, 126, 116, 0.15); border-radius: 6px; padding: 1.5rem 1.75rem; text-align: center;">
-              <h4 style="font-family: var(--font-sans); font-size: 0.9375rem; font-weight: 500; color: var(--charcoal); margin: 0; letter-spacing: 0.04em;">
-                Member-Only Provisions Access
-              </h4>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- ============================================
-             HOW IT WORKS — 3 STEP PROCESS
-             ============================================ -->
-        <div class="reveal" style="margin-bottom: 3rem; background: rgba(0, 0, 0, 0.25); border: 1px solid rgba(196, 192, 185, 0.15); border-radius: 8px; padding: 3rem 2rem;">
-          <div style="text-align: center; margin-bottom: 2.5rem;">
-            <span class="eyebrow" style="color: var(--chrome); letter-spacing: 0.25em;">Seamless Process</span>
-            <h3 style="font-family: var(--font-serif); font-size: clamp(1.75rem, 3.5vw, 2.35rem); color: var(--warm-white); margin-top: 0.4rem;">How the Membership Works</h3>
-          </div>
-
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 2rem; position: relative;">
-            
-            <div style="text-align: left;">
-              <div style="font-family: var(--font-serif); font-size: 2.5rem; color: var(--taupe); line-height: 1; margin-bottom: 0.75rem;">01</div>
-              <h4 style="font-family: var(--font-sans); font-size: 1rem; color: var(--warm-white); margin-bottom: 0.5rem; font-weight: 500;">Select Tier &amp; Join</h4>
-              <p style="font-family: var(--font-sans); font-size: 0.85rem; color: var(--chrome); line-height: 1.65; margin: 0;">
-                Choose the tier that matches your pup's weight. Complete your initial profile with coat details and styling preferences.
-              </p>
-            </div>
-
-            <div style="text-align: left;">
-              <div style="font-family: var(--font-serif); font-size: 2.5rem; color: var(--taupe); line-height: 1; margin-bottom: 0.75rem;">02</div>
-              <h4 style="font-family: var(--font-sans); font-size: 1rem; color: var(--warm-white); margin-bottom: 0.5rem; font-weight: 500;">Set Your Schedule</h4>
-              <p style="font-family: var(--font-sans); font-size: 0.85rem; color: var(--chrome); line-height: 1.65; margin: 0;">
-                Lock in your preferred recurring day each month (e.g. 2nd Wednesday). We send concierge confirmation and arrival updates 48 hours prior.
-              </p>
-            </div>
-
-            <div style="text-align: left;">
-              <div style="font-family: var(--font-serif); font-size: 2.5rem; color: var(--taupe); line-height: 1; margin-bottom: 0.75rem;">03</div>
-              <h4 style="font-family: var(--font-sans); font-size: 1rem; color: var(--warm-white); margin-bottom: 0.5rem; font-weight: 500;">Concierge Pickup &amp; Groom</h4>
-              <p style="font-family: var(--font-sans); font-size: 0.85rem; color: var(--chrome); line-height: 1.65; margin: 0;">
-                We arrive at your door, transport your pup safely, perform their bespoke groom, and return them calm, radiant, and fresh.
-              </p>
-            </div>
-
-          </div>
         </div>
 
         <!-- Pricing Disclaimer Note -->
