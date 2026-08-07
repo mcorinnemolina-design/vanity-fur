@@ -1,5 +1,5 @@
 /* ============================================
-   VANITY FUR CLUB — Design System
+   VANITY FUR CLUB  -  Design System
    Luxury Dog Grooming Concierge · Los Angeles
    ============================================ */
 
@@ -518,7 +518,7 @@ section {
   /* No dropdown overrides anymore; full screen overlay is used for both desktop and mobile */
 }
 
-/* --- Hero Section — Full-Bleed --- */
+/* --- Hero Section  -  Full-Bleed --- */
 .hero {
   position: relative;
   min-height: 100dvh;
@@ -1322,7 +1322,7 @@ section {
 }
 
 /* ============================================
-   RESPONSIVE — Mobile Collapse
+   RESPONSIVE  -  Mobile Collapse
    ============================================ */
 
 @media (max-width: 1024px) {
@@ -1411,7 +1411,7 @@ section {
 }
 
 /* ============================================
-   ABOUT PAGE — RESPONSIVE
+   ABOUT PAGE  -  RESPONSIVE
    ============================================ */
 .asymmetric-grid {
   display: grid;
@@ -1436,7 +1436,7 @@ section {
 }
 
 /* ============================================
-   MEMBERSHIP — CONCIERGE PHOTO SECTION
+   MEMBERSHIP  -  CONCIERGE PHOTO SECTION
    ============================================ */
 .concierge-photo-row {
   display: grid;

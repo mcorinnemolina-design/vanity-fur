@@ -1,5 +1,5 @@
 /* ============================================
-   VANITY FUR CLUB — Klaviyo Integration
+   VANITY FUR CLUB  -  Klaviyo Integration
    ============================================ */
 
 (function() {

@@ -1,5 +1,5 @@
 /* ============================================
-   VANITY FUR CLUB — Product Collections
+   VANITY FUR CLUB  -  Product Collections
    Renders dynamic product cards with custom cart
    ============================================ */
 

@@ -1,5 +1,5 @@
 /* ============================================
-   VANITY FUR CLUB — Custom Cart Drawer
+   VANITY FUR CLUB  -  Custom Cart Drawer
    Uses Shopify Storefront API directly
    ============================================ */
 

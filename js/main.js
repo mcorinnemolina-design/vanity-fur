@@ -1,5 +1,5 @@
 /* ============================================
-   VANITY FUR CLUB — Main Interactions
+   VANITY FUR CLUB  -  Main Interactions
    ============================================ */
 
 (function () {

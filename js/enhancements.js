@@ -1,5 +1,5 @@
 /* ============================================
-   VANITY FUR CLUB — Premium Enhancements
+   VANITY FUR CLUB  -  Premium Enhancements
    Preloader · Scroll Reveals
    ============================================ */
 
